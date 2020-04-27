@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [BAT]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="iotConnect.Listeners"/>
+    <listener class-name="Resources.ExtentReportTestNG"/>
+  </listeners>
+  <test thread-count="5" name="test1(failed)">
+    <classes>
+      <class name="iotConnect.CreateAccountTest">
+        <methods>
+          <include name="launchtest"/>
+          <include name="closebrowser"/>
+          <include name="AccountDetails" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- iotConnect.CreateAccountTest -->
+    </classes>
+  </test> <!-- test1(failed) -->
+  <test thread-count="5" name="test3(failed)">
+    <classes>
+      <class name="iotConnect.CodeActivationTest">
+        <methods>
+          <include name="closebrowser"/>
+          <include name="Entercode" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- iotConnect.CodeActivationTest -->
+    </classes>
+  </test> <!-- test3(failed) -->
+  <test thread-count="5" name="test5(failed)">
+    <classes>
+      <class name="iotConnect.ForgotPasswordTest">
+        <methods>
+          <include name="forgotpassword"/>
+          <include name="closebrowser"/>
+        </methods>
+      </class> <!-- iotConnect.ForgotPasswordTest -->
+    </classes>
+  </test> <!-- test5(failed) -->
+</suite> <!-- Failed suite [BAT] -->

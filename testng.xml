@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="BAT">
+<listeners>
+<listener class-name="iotConnect.Listeners"/>
+<listener class-name="Resources.ExtentReportTestNG"/>
+</listeners>
+
+<test name="test1">
+    <classes>
+      <class name="iotConnect.CreateAccountTest"/>
+    </classes>
+   </test>
+
+ <test name="test2">
+    <classes>
+      <class name="iotConnect.LoginTest"/>
+    </classes>
+  </test>   
+  
+  <test name="test3">
+    <classes>
+      <class name="iotConnect.CodeActivationTest"/>
+   </classes>
+    </test>
+
+  <test name="test4">
+    <classes>
+      <class name="iotConnect.LoginAfterActivationTest"/>
+    </classes>
+    </test>
+    
+  <test name="test5">
+    <classes>
+      <class name="iotConnect.ForgotPasswordTest"/>
+    </classes>
+    </test>
+    
+  <test name="test6">
+    <classes>
+      <class name="iotConnect.MultiplewindowTest"/>
+    </classes>
+    </test>
+        
+  <test name="test7">
+    <classes>
+      <class name="iotConnect.AddRoomTest"/>
+    </classes>
+   </test> 
+       
+  <test name="test8">
+    <classes>
+      <class name="iotConnect.DeleteRoomTest"/>       
+    </classes>
+    
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
