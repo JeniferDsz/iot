@@ -2,20 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-04-27T15:45:36 IST" name="Default suite" finished-at="2020-04-27T15:46:17 IST" duration-ms="40300">
+  <suite started-at="2020-04-27T18:40:21 IST" name="Default suite" finished-at="2020-04-27T18:40:52 IST" duration-ms="30692">
     <groups>
     </groups>
-    <test started-at="2020-04-27T15:45:36 IST" name="Default test" finished-at="2020-04-27T15:46:17 IST" duration-ms="40300">
-      <class name="iotConnect.DeviceStatusTest">
-        <test-method signature="devicestatus()[pri:0, instance:iotConnect.DeviceStatusTest@31e5415e]" started-at="2020-04-27T15:45:36 IST" name="devicestatus" finished-at="2020-04-27T15:46:10 IST" duration-ms="33848" status="PASS">
+    <test started-at="2020-04-27T18:40:21 IST" name="Default test" finished-at="2020-04-27T18:40:52 IST" duration-ms="30692">
+      <class name="iotConnect.RelayONorOFFTest">
+        <test-method signature="relaytest()[pri:0, instance:iotConnect.RelayONorOFFTest@120f102b]" started-at="2020-04-27T18:40:21 IST" name="relaytest" finished-at="2020-04-27T18:40:52 IST" duration-ms="30639" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- devicestatus -->
-        <test-method is-config="true" signature="closebrowser()[pri:0, instance:iotConnect.DeviceStatusTest@31e5415e]" started-at="2020-04-27T15:46:10 IST" name="closebrowser" finished-at="2020-04-27T15:46:17 IST" duration-ms="6393" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closebrowser -->
-      </class> <!-- iotConnect.DeviceStatusTest -->
+        </test-method> <!-- relaytest -->
+      </class> <!-- iotConnect.RelayONorOFFTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="iotConnect.LoginTest">
+      <class name="iotConnect.RelayONorOFFTest">
         <methods>
-          <include name="closebrowser"/>
-          <include name="loginiot" invocation-numbers="0 1"/>
+          <include name="relaytest"/>
         </methods>
-      </class> <!-- iotConnect.LoginTest -->
+      </class> <!-- iotConnect.RelayONorOFFTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
