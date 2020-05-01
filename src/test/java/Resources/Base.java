@@ -3,6 +3,7 @@ package Resources;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.io.*;
@@ -26,7 +27,8 @@ public class Base {
 	
 		ChromeOptions ch=new ChromeOptions();
 		ch.addArguments("--disable-notifications");
-		FileInputStream fis=new FileInputStream("C:\\Users\\avira\\jenny\\test\\iot\\src\\test\\java\\Resources\\test.properties");
+		File directory = new File("./src/test/java/Resources/test.properties");
+		FileInputStream fis=new FileInputStream(directory.getAbsolutePath());
 		prop.load(fis);
 		String BrowserName=prop.getProperty("browser");
 		if(BrowserName.equalsIgnoreCase("Chrome"))
