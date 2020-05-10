@@ -11,7 +11,7 @@ public class Minimise {
 	{
 		this.driver=driver;
 	}
-	By min=By.xpath("//span[@class='glyphicon glyphicon-resize-small']");
+	By min=By.xpath("//button[@class='btn btn-default resize-btn pull-right']");
 	public WebElement minimizewindow()
 	{
 		return driver.findElement(min);

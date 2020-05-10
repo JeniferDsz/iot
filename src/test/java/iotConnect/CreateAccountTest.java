@@ -18,7 +18,7 @@ public class CreateAccountTest extends Base{
 	{
 		System.out.println("Launching the web browser");
 	}
-	@Test(dataProvider="getData")
+	@Test(dataProvider="getData",groups={"Smoke"})
 	public void AccountDetails(String username, String password, String confirmPassword,String emailID,String mobilenum,String person) throws IOException, InterruptedException
 	{
 		WebDriver driver=initializedriver();

@@ -6,12 +6,9 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 import Resources.Base;
-
-
-
 public class RelayONorOFFTest extends Base {
 
-	@Test
+	@Test(groups={"Smoke"})
 	public void relaytest() throws IOException, InterruptedException
 	{
 		driver=initializedriver();

@@ -11,7 +11,7 @@ import Resources.Base;
 
 public class AddRoomTest extends Base{
 
-	@Test(dataProvider="getData")
+	@Test(dataProvider="getData",groups={"Smoke"})
 	public void Add(String Roomnames) throws IOException, InterruptedException
 	{
 		WebDriver driver=initializedriver();

@@ -16,13 +16,10 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import Resources.Base;
-
-
-
 public class LoginTest extends Base{
 		public static Logger log=LogManager.getLogger(Base.class.getName());
 		// TODO Auto-generated method stub
-		@Test(dataProvider= "getData")
+		@Test(dataProvider= "getData",groups={"Smoke"})
 		public void loginiot(String username, String password) throws IOException, InterruptedException
 		{
 			

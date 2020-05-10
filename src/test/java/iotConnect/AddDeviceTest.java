@@ -7,14 +7,9 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import Resources.Base;
-
-
-
-
-
 public class AddDeviceTest extends Base{
 
-	@Test
+	@Test(groups={"Smoke"})
 	public void Add() throws IOException, InterruptedException
 	{
 	WebDriver driver=initializedriver();
