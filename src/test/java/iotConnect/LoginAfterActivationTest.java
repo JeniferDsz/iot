@@ -11,7 +11,7 @@ import Resources.Base;
 
 public class LoginAfterActivationTest extends Base{
 
-	@Test(groups={"Smoke"})
+	@Test(groups={"Smoke"}, priority=2)
 	public void loginactivate() throws IOException, InterruptedException
 	{
 		

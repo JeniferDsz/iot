@@ -11,7 +11,7 @@ import Resources.Base;
 
 public class CodeActivationTest extends Base{
 
-	@Test(dataProvider="getData",groups={"Smoke"})
+	@Test(dataProvider="getData",groups={"Smoke"},priority=7)
 	public void Entercode(String code) throws IOException, InterruptedException
 	{
 		WebDriver driver=initializedriver();

@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="iotConnect.LoginAfterActivationTest">
+      <class name="iotConnect.MinimiseTest">
         <methods>
-          <include name="closebrowser"/>
-          <include name="loginactivate"/>
+          <include name="minim"/>
         </methods>
-      </class> <!-- iotConnect.LoginAfterActivationTest -->
+      </class> <!-- iotConnect.MinimiseTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

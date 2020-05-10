@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import Resources.Base;
@@ -18,7 +19,7 @@ public class CreateAccountTest extends Base{
 	{
 		System.out.println("Launching the web browser");
 	}
-	@Test(dataProvider="getData",groups={"Smoke"})
+	@Test(dataProvider="getData",groups={"Smoke"}, priority=1)
 	public void AccountDetails(String username, String password, String confirmPassword,String emailID,String mobilenum,String person) throws IOException, InterruptedException
 	{
 		WebDriver driver=initializedriver();

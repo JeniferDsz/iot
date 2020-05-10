@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import Resources.Base;
 public class AddDeviceTest extends Base{
 
-	@Test(groups={"Smoke"})
+	@Test(groups={"Smoke"},priority=6)
 	public void Add() throws IOException, InterruptedException
 	{
 	WebDriver driver=initializedriver();
