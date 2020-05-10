@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import Resources.Base;
 public class RelayONorOFFTest extends Base {
 
-	@Test(groups={"Smoke"})
+	@Test(groups={"Smoke"},priority=9)
 	public void relaytest() throws IOException, InterruptedException
 	{
 		driver=initializedriver();

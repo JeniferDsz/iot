@@ -14,7 +14,7 @@ import Resources.Base;
 
 public class MultiplewindowTest extends Base{
 
-	@Test
+	@Test(priority=11)
 	public void multiple() throws IOException, InterruptedException
 	{
 		WebDriver driver=initializedriver();

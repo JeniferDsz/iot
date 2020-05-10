@@ -19,7 +19,7 @@ import Resources.Base;
 public class LoginTest extends Base{
 		public static Logger log=LogManager.getLogger(Base.class.getName());
 		// TODO Auto-generated method stub
-		@Test(dataProvider= "getData",groups={"Smoke"})
+		@Test(dataProvider= "getData",groups={"Smoke"},priority=3)
 		public void loginiot(String username, String password) throws IOException, InterruptedException
 		{
 			

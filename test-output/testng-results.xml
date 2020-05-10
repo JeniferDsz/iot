@@ -1,17 +1,321 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="5" total="15" passed="8" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-05-01T15:59:19 IST" name="Default suite" finished-at="2020-05-01T15:59:51 IST" duration-ms="31677">
+  <suite started-at="2020-05-10T20:31:08 IST" name="Suite" finished-at="2020-05-10T20:38:02 IST" duration-ms="413728">
     <groups>
+      <group name="Smoke">
+        <method signature="AddDeviceTest.Add()[pri:6, instance:iotConnect.AddDeviceTest@7829b776]" name="Add" class="iotConnect.AddDeviceTest"/>
+        <method signature="AddRoomTest.Add(java.lang.String)[pri:5, instance:iotConnect.AddRoomTest@61bcd567]" name="Add" class="iotConnect.AddRoomTest"/>
+        <method signature="CodeActivationTest.Entercode(java.lang.String)[pri:7, instance:iotConnect.CodeActivationTest@4763c727]" name="Entercode" class="iotConnect.CodeActivationTest"/>
+        <method signature="CreateAccountTest.AccountDetails(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:iotConnect.CreateAccountTest@1c80e49b]" name="AccountDetails" class="iotConnect.CreateAccountTest"/>
+        <method signature="LoginAfterActivationTest.loginactivate()[pri:2, instance:iotConnect.LoginAfterActivationTest@5b64c4b7]" name="loginactivate" class="iotConnect.LoginAfterActivationTest"/>
+        <method signature="LoginTest.loginiot(java.lang.String, java.lang.String)[pri:3, instance:iotConnect.LoginTest@72445aba]" name="loginiot" class="iotConnect.LoginTest"/>
+        <method signature="RelayONorOFFTest.relaytest()[pri:9, instance:iotConnect.RelayONorOFFTest@5778826f]" name="relaytest" class="iotConnect.RelayONorOFFTest"/>
+      </group> <!-- Smoke -->
     </groups>
-    <test started-at="2020-05-01T15:59:19 IST" name="Default test" finished-at="2020-05-01T15:59:51 IST" duration-ms="31677">
-      <class name="iotConnect.MinimiseTest">
-        <test-method signature="minim()[pri:0, instance:iotConnect.MinimiseTest@cad498c]" started-at="2020-05-01T15:59:19 IST" name="minim" finished-at="2020-05-01T15:59:51 IST" duration-ms="31601" status="PASS">
+    <test started-at="2020-05-10T20:31:08 IST" name="Test" finished-at="2020-05-10T20:38:02 IST" duration-ms="413728">
+      <class name="iotConnect.LoginAfterActivationTest">
+        <test-method signature="loginactivate()[pri:2, instance:iotConnect.LoginAfterActivationTest@5b64c4b7]" started-at="2020-05-10T20:32:31 IST" name="loginactivate" finished-at="2020-05-10T20:33:00 IST" duration-ms="28640" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- minim -->
-      </class> <!-- iotConnect.MinimiseTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- loginactivate -->
+      </class> <!-- iotConnect.LoginAfterActivationTest -->
+      <class name="iotConnect.CreateAccountTest">
+        <test-method signature="AccountDetails(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:iotConnect.CreateAccountTest@1c80e49b]" started-at="2020-05-10T20:31:08 IST" name="AccountDetails" data-provider="getData" finished-at="2020-05-10T20:32:01 IST" duration-ms="52839" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Jenifer.Dsouza123]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Jenifer@123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Jenifer@123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[jjendsouza+123@gmail.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[8197762572]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Jeniferdsouza123]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'Ok')]"}
+  (Session info: chrome=81.0.4044.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-CBDV09A', ip: '192.168.0.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\avira\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54117}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1d0f42171ce16e1eb96e37ed0ac8393b
+*** Element info: {Using=xpath, value=//button[contains(text(),'Ok')]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'Ok')]"}
+  (Session info: chrome=81.0.4044.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-CBDV09A', ip: '192.168.0.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\avira\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54117}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1d0f42171ce16e1eb96e37ed0ac8393b
+*** Element info: {Using=xpath, value=//button[contains(text(),'Ok')]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at iotConnect.Launch.OK(Launch.java:58)
+at iotConnect.CreateAccountTest.AccountDetails(CreateAccountTest.java:35)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AccountDetails -->
+        <test-method signature="AccountDetails(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:iotConnect.CreateAccountTest@1c80e49b]" started-at="2020-05-10T20:32:01 IST" name="AccountDetails" data-provider="getData" finished-at="2020-05-10T20:32:31 IST" duration-ms="30040" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Maria.Dsouza]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Maria@123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Maria@123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[jjiyadsouza@yahoo.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[123456789]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Mariasouza27]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AccountDetails -->
+      </class> <!-- iotConnect.CreateAccountTest -->
+      <class name="iotConnect.CodeActivationTest">
+        <test-method signature="Entercode(java.lang.String)[pri:7, instance:iotConnect.CodeActivationTest@4763c727]" started-at="2020-05-10T20:33:57 IST" name="Entercode" data-provider="getData" finished-at="2020-05-10T20:34:39 IST" duration-ms="41485" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[swU1saKSme]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='email_activation_code']"}
+  (Session info: chrome=81.0.4044.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-CBDV09A', ip: '192.168.0.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\avira\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54833}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f1af311410ca86ed8333744d7d994b1d
+*** Element info: {Using=xpath, value=//input[@id='email_activation_code']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='email_activation_code']"}
+  (Session info: chrome=81.0.4044.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-CBDV09A', ip: '192.168.0.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\avira\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54833}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f1af311410ca86ed8333744d7d994b1d
+*** Element info: {Using=xpath, value=//input[@id='email_activation_code']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at iotConnect.CodeActivation.activationcode(CodeActivation.java:22)
+at iotConnect.CodeActivationTest.Entercode(CodeActivationTest.java:24)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Entercode -->
+      </class> <!-- iotConnect.CodeActivationTest -->
+      <class name="iotConnect.RelayONorOFFTest">
+        <test-method signature="relaytest()[pri:9, instance:iotConnect.RelayONorOFFTest@5778826f]" started-at="2020-05-10T20:37:27 IST" name="relaytest" finished-at="2020-05-10T20:38:02 IST" duration-ms="35275" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- relaytest -->
+      </class> <!-- iotConnect.RelayONorOFFTest -->
+      <class name="iotConnect.AddRoomTest">
+        <test-method signature="Add(java.lang.String)[pri:5, instance:iotConnect.AddRoomTest@61bcd567]" started-at="2020-05-10T20:36:17 IST" name="Add" data-provider="getData" finished-at="2020-05-10T20:36:52 IST" duration-ms="34807" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[BedRoom]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add -->
+        <test-method signature="Add(java.lang.String)[pri:5, instance:iotConnect.AddRoomTest@61bcd567]" started-at="2020-05-10T20:36:52 IST" name="Add" data-provider="getData" finished-at="2020-05-10T20:37:27 IST" duration-ms="34415" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Living Room]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add -->
+      </class> <!-- iotConnect.AddRoomTest -->
+      <class name="iotConnect.AddDeviceTest">
+        <test-method signature="Add()[pri:6, instance:iotConnect.AddDeviceTest@7829b776]" started-at="2020-05-10T20:33:00 IST" name="Add" finished-at="2020-05-10T20:33:57 IST" duration-ms="57508" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add -->
+      </class> <!-- iotConnect.AddDeviceTest -->
+      <class name="iotConnect.LoginTest">
+        <test-method signature="loginiot(java.lang.String, java.lang.String)[pri:3, instance:iotConnect.LoginTest@72445aba]" started-at="2020-05-10T20:34:39 IST" name="loginiot" data-provider="getData" finished-at="2020-05-10T20:35:28 IST" duration-ms="49315" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Jenifer.Dsouza]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Jenifer@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginiot -->
+        <test-method signature="loginiot(java.lang.String, java.lang.String)[pri:3, instance:iotConnect.LoginTest@72445aba]" started-at="2020-05-10T20:35:28 IST" name="loginiot" data-provider="getData" finished-at="2020-05-10T20:36:17 IST" duration-ms="49245" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Jenifer.Dsouza]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Jenifer@1234]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginiot -->
+      </class> <!-- iotConnect.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

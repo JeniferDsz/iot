@@ -12,7 +12,7 @@ import Resources.Base;
 
 public class ForgotPasswordTest extends Base {
 
-	@Test
+	@Test(priority=4)
 	public void forgotpassword() throws IOException, InterruptedException
 	{
 		WebDriver driver=initializedriver();

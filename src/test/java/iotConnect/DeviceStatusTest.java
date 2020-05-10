@@ -10,7 +10,7 @@ import Resources.Base;
 
 public class DeviceStatusTest extends Base{
 
-	@Test
+	@Test(priority=8)
 	public void devicestatus() throws IOException, InterruptedException
 	{
 		driver=initializedriver();

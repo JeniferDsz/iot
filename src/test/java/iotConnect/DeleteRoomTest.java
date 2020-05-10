@@ -10,7 +10,7 @@ import Resources.Base;
 
 public class DeleteRoomTest extends Base{
 
-		@Test
+		@Test(priority=12, enabled=false)
 		public void delete() throws IOException, InterruptedException
 		{
 		WebDriver driver=initializedriver();
