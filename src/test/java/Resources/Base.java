@@ -25,8 +25,6 @@ public class Base {
 	public WebDriver initializedriver() throws IOException
 	{
 	
-		ChromeOptions ch=new ChromeOptions();
-		ch.addArguments("--disable-notifications");
 		File directory = new File("./src/test/java/Resources/test.properties");
 		FileInputStream fis=new FileInputStream(directory.getAbsolutePath());
 		prop.load(fis);
@@ -34,7 +32,7 @@ public class Base {
 		if(BrowserName.equalsIgnoreCase("Chrome"))
 		{
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\avira\\Documents\\chromedriver.exe");
-			driver=new ChromeDriver(ch);
+			driver=new ChromeDriver();
 		}
 		else if(BrowserName.equalsIgnoreCase("firefox"))
 		{
