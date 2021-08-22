@@ -2,6 +2,7 @@ package iotConnect;
 
 import java.io.IOException;
 
+import org.apache.commons.codec.binary.Base64;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -15,8 +16,8 @@ public class LoginTest extends Base {
 	public static Logger log = LogManager.getLogger(Base.class.getName());
 
 	// TODO Auto-generated method stub
-	@Test(dataProvider = "getData", groups = { "Smoke" }, priority = 3)
-	public void loginiot(String username, String password) throws IOException, InterruptedException {
+	@Test( priority=3,dataProvider = "getData", groups = { "Smoke" })
+	public void login(String username, String password) throws IOException, InterruptedException {
 
 		WebDriver driver = initializedriver();
 		log.debug("Started debugging");
@@ -25,17 +26,15 @@ public class LoginTest extends Base {
 		try {
 
 			l.register().click();
-			l.enterusername().sendKeys(username);
-			l.enteruserpass().sendKeys(password);
-			Thread.sleep(2000);
+			credentials(username,password);
 			l.submit().click();
 			log.info("Home page is loaded");
-			Assert.assertTrue(l.code().isDisplayed());
+			l.clickalert().click();
+			//Assert.assertTrue(l.code().isDisplayed());
 			// Thread.sleep(2000);
-
 		} catch (Exception e) {
 
-			l.alertaccept().isDisplayed();
+			l.alertbox().isDisplayed();
 			System.out.println(l.textdisplayed().getText());
 			log.info("text is displayed");
 			l.clickalert().click();
@@ -43,31 +42,32 @@ public class LoginTest extends Base {
 		} catch (Error e) {
 			log.error("Wrong email or pssword entered");
 		}
-		driver.close();
+		
+		driver.quit();
+		
 	}
 
+	public void credentials(String username,String password)
+	{
+		Login l = new Login(driver);
+		l.enterusername().sendKeys(username);
+		l.enteruserpass().sendKeys(decodepassword(password));
+	}
+	public String decodepassword(String pass)
+	{
+		byte[] decodepass=Base64.decodeBase64(pass.getBytes());
+		return(new String(decodepass));
+	}
+	
 	@DataProvider()
 	public Object[] getData() {
 		String obj[][] = new String[2][2];
-		obj[0][0] = "123";
-		obj[0][1] = "******";
+		obj[0][0] = "Jenifer.Dsouza";
+		obj[0][1] = "SmVuaUAxMjM0";
 
-		obj[1][0] = "234";
-		obj[1][1] = "******";
+		obj[1][0] = "Jenifer.Dsouza1";
+		obj[1][1] = "SmVuaUAxMjM0";
 		return obj;
 	}
-
-	/*
-	 * @AfterTest public void closebrowsers() throws InterruptedException {
-	 * Set<String> handlesSet = driver.getWindowHandles(); List<String> handlesList
-	 * = new ArrayList<String>(handlesSet); Iterator<String>
-	 * it=handlesSet.iterator(); driver.switchTo().window(handlesList.get(0));
-	 * 
-	 * while(it.hasNext()) { driver.close();
-	 * 
-	 * }
-	 * 
-	 * }
-	 */
-
+	
 }

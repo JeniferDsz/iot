@@ -3,6 +3,8 @@ package iotConnect;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginAfterActivation {
 
@@ -19,7 +21,8 @@ public class LoginAfterActivation {
 		By ok=By.xpath("//button[@class='ui-button ui-corner-all ui-widget']");
 		public WebElement register() throws InterruptedException
 		{
-			Thread.sleep(5000);
+			WebDriverWait w=new WebDriverWait(driver,20);
+			w.until(ExpectedConditions.elementToBeClickable(userregister));
 			return driver.findElement(userregister);
 		}
 		public WebElement enterusername()

@@ -2,6 +2,7 @@ package iotConnect;
 
 import java.io.IOException;
 
+import org.apache.commons.codec.binary.Base64;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.DataProvider;
@@ -11,15 +12,15 @@ import Resources.Base;
 
 public class CodeActivationTest extends Base{
 
-	@Test(dataProvider="getData",groups={"Smoke"},priority=7)
+	@Test(dataProvider="getData",groups={"Smoke"},enabled=false)
 	public void Entercode(String code) throws IOException, InterruptedException
 	{
 		WebDriver driver=initializedriver();
 		CodeActivation ca=new CodeActivation(driver);
 		Login l=new Login(driver);
 		l.register().click();
-		l.enterusername().sendKeys("Jenifer.Dsouza");
-		l.enteruserpass().sendKeys("Jenifer@123");
+		LoginAfterActivationTest lt=new LoginAfterActivationTest();
+		lt.credentials();
 		l.submit().click();
 		ca.activationcode().sendKeys(code);
 		ca.activateclick().click();

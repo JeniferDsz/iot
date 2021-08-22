@@ -19,11 +19,10 @@ public class MultipleWindow {
 		By help=By.xpath("//a[contains(text(), 'Help and Contents')]");
 		By controlpanel=By.xpath("//a[contains(text(),'Control Panel')]");
 		
-		
+		String key = Keys.chord(Keys.CONTROL, Keys.ENTER);
 		public WebElement helplink() throws InterruptedException
 		{
 			Thread.sleep(2000);
-			
 			return driver.findElement(help);
 			
 		}

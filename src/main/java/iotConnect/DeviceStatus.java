@@ -11,8 +11,10 @@ public class DeviceStatus {
 	{
 		this.driver=driver;
 	}
-	By device=By.xpath("//span[@id='3713700-status']");
-	By status=By.xpath("//span[@id='3713700-offlineTime']");
+	By device=By.xpath("//a[contains(@aria-controls,'tab_')]");
+	By minimize=By.cssSelector("button[onclick*='minimize']");
+	By status=By.cssSelector("span[id*=-offlineTime]");
+	By room=By.xpath("//a[@id='room_305_btn']");
 	public WebElement deviceclick()
 	{
 		return driver.findElement(device);
@@ -21,4 +23,14 @@ public class DeviceStatus {
 	{
 		return driver.findElement(status);
 	}
+	public WebElement minimize() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		return driver.findElement(minimize);
+	}
+	public WebElement RoomName()
+	{
+		return driver.findElement(room);
+	}
+
 }

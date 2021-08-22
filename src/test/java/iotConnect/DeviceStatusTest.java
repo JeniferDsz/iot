@@ -10,29 +10,25 @@ import Resources.Base;
 
 public class DeviceStatusTest extends Base{
 
-	@Test(priority=8)
-	public void devicestatus() throws IOException, InterruptedException
+	@Test(priority=6)
+	public void deviceStatus() throws IOException, InterruptedException
 	{
 		driver=initializedriver();
 		LoginAfterActivation la=new LoginAfterActivation(driver);
 		la.register().click();
-		la.enterusername().sendKeys("Jenifer.Dsouza");
-		la.enteruserpass().sendKeys("Jenifer@123");
+		LoginAfterActivationTest lt=new LoginAfterActivationTest();
+		lt.credentials();
 		la.submit().click();
 		la.alertsuccess().click();
 		Thread.sleep(2000);
 		la.alertaccept().click();
-		AddDevice a=new AddDevice(driver);
-		a.RoomName().click();
 		DeviceStatus ds=new DeviceStatus(driver);
+		ds.RoomName().click();
 		ds.deviceclick().click();
-		System.out.println("device status is:"+ds.devicestatus().getText());
-	}
-	@AfterTest
-	public void closebrowser() throws InterruptedException
-	{
+		ds.minimize().click();
+		String text=ds.devicestatus().getText();
+		System.out.println("device status is:" +text);
 		Thread.sleep(2000);
-		driver.close();
-		driver=null;
+		driver.quit();
 	}
 }

@@ -1,0 +1,8 @@
+16:51:25.491 [TestNG-tests-1] INFO  Resources.Base - Home page is loaded
+19:31:10.774 [main] DEBUG Resources.Base - Started debugging
+19:31:10.782 [main] INFO  Resources.Base - driver is initialized
+19:31:40.119 [main] INFO  Resources.Base - Home page is loaded
+19:31:46.398 [main] DEBUG Resources.Base - Started debugging
+19:31:46.398 [main] INFO  Resources.Base - driver is initialized
+19:32:09.551 [main] INFO  Resources.Base - Home page is loaded
+19:33:00.431 [TestNG-tests-1] DEBUG Resources.Base - Started debugging

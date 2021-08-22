@@ -3,6 +3,9 @@ package iotConnect;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Launch {
 
@@ -17,12 +20,13 @@ public class Launch {
 	By confirmpass=By.xpath("//input[@id='reg_cpass']");
 	By email=By.xpath("//input[@id='reg_email']");
 	By mobno=By.xpath("//input[@id='reg_mob']");
-	By personname=By.xpath("//input[@id='reg_name']");
-	By submit=By.xpath("//button[contains(text(),'Signup')]");
+	By personname=By.xpath("//input[@placeholder='Name']");
+	By sub=By.xpath("//button[contains(text(),'Signup')]");
 	By clickalert=By.xpath("//button[contains(text(),'Ok')]");
 	
-	public WebElement register()
+	public WebElement register() throws InterruptedException
 	{
+		Thread.sleep(10000);
 		return driver.findElement(userregister);
 	}
 	public WebElement userid()
@@ -41,21 +45,35 @@ public class Launch {
 	{
 		return driver.findElement(email);
 	}
-	public WebElement mobile()
+	public WebElement mobile() throws InterruptedException
 	{
+		Thread.sleep(5000);
 		return driver.findElement(mobno);
 	}
-	public WebElement name()
+	public WebElement name() throws InterruptedException
 	{
+		Thread.sleep(5000);
 		return driver.findElement(personname);
 	}
-	public WebElement submitData()
+	public void Act() throws InterruptedException
 	{
-		return driver.findElement(submit);
+		Thread.sleep(2000);
+		Actions a=new Actions(driver);
+		a.moveToElement(driver.findElement(By.xpath("//small[contains(text(),'On Clicking Sign Up')]"))).click().build().perform();
 	}
-	public WebElement OK()
+	public WebElement submitMe() throws InterruptedException
 	{
+		Thread.sleep(3000);
+		return driver.findElement(sub);
+	}
+	
+	
+	public WebElement OK() throws InterruptedException
+	{
+		Thread.sleep(3000);
 		return driver.findElement(clickalert);
 	}
+	
+	
 	
 }

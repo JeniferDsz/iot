@@ -1,0 +1,8 @@
+19:00:02.915 [main] INFO  Resources.Base - Home page is loaded
+19:00:18.029 [main] INFO  Resources.Base - text is displayed
+19:00:18.067 [main] ERROR Resources.Base - Wrong email or pssword entered
+23:54:28.188 [main] DEBUG Resources.Base - Started debugging
+23:54:28.191 [main] INFO  Resources.Base - driver is initialized
+23:54:48.292 [main] INFO  Resources.Base - Home page is loaded
+23:55:03.441 [main] INFO  Resources.Base - text is displayed
+23:55:03.486 [main] ERROR Resources.Base - Wrong email or pssword entered

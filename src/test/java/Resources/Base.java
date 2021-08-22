@@ -1,14 +1,14 @@
 package Resources;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import java.io.*;
 
-import org.codehaus.plexus.util.FileUtils;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -16,6 +16,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class Base {
@@ -25,25 +27,29 @@ public class Base {
 	public WebDriver initializedriver() throws IOException
 	{
 	
-		ChromeOptions ch=new ChromeOptions();
-		ch.addArguments("--disable-notifications");
+		//ChromeOptions options=new ChromeOptions();
+		//options.addArguments("--headless");
 		File directory = new File("./src/test/java/Resources/test.properties");
 		FileInputStream fis=new FileInputStream(directory.getAbsolutePath());
 		prop.load(fis);
 		String BrowserName=prop.getProperty("browser");
 		if(BrowserName.equalsIgnoreCase("Chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\avira\\Documents\\chromedriver.exe");
-			driver=new ChromeDriver(ch);
+			//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Jenifer\\Documents\\chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
+			driver=new ChromeDriver();
+		//	driver=new ChromeDriver(options);
 		}
 		else if(BrowserName.equalsIgnoreCase("firefox"))
 		{
-			System.setProperty("webdriver.gecko.driver", "C:\\Users\\avira\\Documents\\geckodriver.exe");
+			//System.setProperty("webdriver.gecko.driver", "C:\\Users\\avira\\Documents\\geckodriver.exe");
+			WebDriverManager.chromedriver().setup();
 			driver=new FirefoxDriver();
 		}
 		else if(BrowserName.equalsIgnoreCase("Edge"))
 		{
-			System.setProperty("webdriver.edge.driver", "C:\\Users\\avira\\Documents\\msedgedriver.exe");
+			//System.setProperty("webdriver.edge.driver", "C:\\Users\\avira\\Documents\\msedgedriver.exe");
+			WebDriverManager.chromedriver().setup();
 			driver=new EdgeDriver();
 		}
 		
@@ -55,9 +61,12 @@ public class Base {
 			
 			
 	}
-	public void ScreenshotOnFail(String result) throws IOException
+	public String ScreenshotOnFail(String result,WebDriver driver) throws IOException
 	{
 		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(src, new File("C:\\Users\\avira\\.jenkins\\Alexa\\FailureScreenshots\\"+result+"screenshot.png"));
+		String destinationFile=System.getProperty("user.dir")+"\\Reports\\"+result+".png";
+		FileUtils.copyFile(src, new File(destinationFile));
+		return destinationFile;
+		
 	}
 }

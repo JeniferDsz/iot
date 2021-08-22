@@ -14,6 +14,9 @@
     </Console>
   </Appenders>
   <Loggers>
+  <!--Logger name="com.foo.Bar" level="trace" additivity="false">
+      <AppenderRef ref="Console"/>
+    </Logger>-->
     <Root level="trace" additivity="false">
       <AppenderRef ref="File"/>
     </Root>

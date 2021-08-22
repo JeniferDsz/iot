@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="Suite" parallel="tests">
+<listeners>
+<listener class-name="iotConnect.Listeners"/>
+</listeners>
   <test thread-count="5" name="Test">
-  <groups>
-  <run>
-  <include name="Smoke"></include>
-  </run>
-  </groups>
     <classes>
-      <class name="iotConnect.AddDeviceTest"/>
-      <class name="iotConnect.RelayONorOFFTest"/>
-      <class name="iotConnect.MinimiseTest"/>
-      <class name="iotConnect.DeleteRoomTest"/>
+      <class name="iotConnect.CreateAccountTest"/>
       <class name="iotConnect.LoginAfterActivationTest"/>
-      <class name="iotConnect.ForgotPasswordTest"/>
-      <class name="iotConnect.MultiplewindowTest"/>
-      <class name="iotConnect.CodeActivationTest"/>
       <class name="iotConnect.LoginTest"/>
+      <class name="iotConnect.ForgotPasswordTest"/>
       <class name="iotConnect.AddRoomTest"/>
       <class name="iotConnect.DeviceStatusTest"/>
-      <class name="iotConnect.CreateAccountTest"/>
+      <class name="iotConnect.MinimiseTest"/>
+      <class name="iotConnect.RelayONorOFFTest"/>
+      <class name="iotConnect.MultiplewindowTest"/>
+      <class name="iotConnect.DeleteRoomTest"/>
+      <class name="iotConnect.CodeActivationTest"/>
+     
+    
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

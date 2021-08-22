@@ -1,11 +1,11 @@
 package iotConnect;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 
 public class Relay {
@@ -15,18 +15,18 @@ public class Relay {
 	{
 		this.driver=driver;
 	}
-	
-	By toggle=By.xpath("//select[@id='triggerRelay']");
-	By onoff=By.xpath("//select[@id='triggerAction']");
-	public WebElement selecttest()
+
+	By toggle=By.xpath("//div[@class='slider round']");
+
+	public List<WebElement> toggleonoff()
 	{
-		return driver.findElement(toggle);
-	}
-	public WebElement onofftest()
-	{
-		return driver.findElement(onoff);
+		List<WebElement> total=driver.findElements(toggle);
+		for(int i=0;i<total.size();i++)
+		{
+			total.get(i).click();
+		}
+		return total;
 	}
 
-	
 	
 }

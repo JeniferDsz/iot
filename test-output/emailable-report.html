@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <title>TestNG Report</title>
@@ -8,64 +8,12 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">8</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">413,728</td><td>Smoke</td><td></td></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">66,680</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">iotConnect.CodeActivationTest</td><td><a href="#m0">Entercode</a></td><td rowspan="1">1589123037771</td><td rowspan="1">41485</td></tr><tr class="failedodd"><td rowspan="1">iotConnect.CreateAccountTest</td><td><a href="#m1">AccountDetails</a></td><td rowspan="1">1589122868716</td><td rowspan="1">52839</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">iotConnect.AddDeviceTest</td><td><a href="#m2">Add</a></td><td rowspan="1">1589122980260</td><td rowspan="1">57508</td></tr><tr class="passedodd"><td rowspan="2">iotConnect.AddRoomTest</td><td><a href="#m3">Add</a></td><td rowspan="2">1589123212635</td><td rowspan="2">34415</td></tr><tr class="passedodd"><td><a href="#m4">Add</a></td></tr><tr class="passedeven"><td rowspan="1">iotConnect.CreateAccountTest</td><td><a href="#m5">AccountDetails</a></td><td rowspan="1">1589122921568</td><td rowspan="1">30040</td></tr><tr class="passedodd"><td rowspan="1">iotConnect.LoginAfterActivationTest</td><td><a href="#m6">loginactivate</a></td><td rowspan="1">1589122951618</td><td rowspan="1">28640</td></tr><tr class="passedeven"><td rowspan="2">iotConnect.LoginTest</td><td><a href="#m7">loginiot</a></td><td rowspan="2">1589123128579</td><td rowspan="2">49245</td></tr><tr class="passedeven"><td><a href="#m8">loginiot</a></td></tr><tr class="passedodd"><td rowspan="1">iotConnect.RelayONorOFFTest</td><td><a href="#m9">relaytest</a></td><td rowspan="1">1589123247052</td><td rowspan="1">35275</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">iotConnect.LoginTest</td><td><a href="#m0">login</a></td><td rowspan="2">1629640865368</td><td rowspan="2">37056</td></tr><tr class="passedeven"><td><a href="#m1">login</a></td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">iotConnect.CodeActivationTest#Entercode</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>swU1saKSme</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&apos;email_activation_code&apos;]&quot;}
-  (Session info: chrome=81.0.4044.138)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-CBDV09A&apos;, ip: &apos;192.168.0.114&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\avira\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54833}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: f1af311410ca86ed8333744d7d994b1d
-*** Element info: {Using=xpath, value=//input[@id=&apos;email_activation_code&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at iotConnect.CodeActivation.activationcode(CodeActivation.java:22)
-	at iotConnect.CodeActivationTest.Entercode(CodeActivationTest.java:24)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">iotConnect.CreateAccountTest#AccountDetails</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr><tr class="param stripe"><td>Jenifer.Dsouza123</td><td>Jenifer@123</td><td>Jenifer@123</td><td>jjendsouza+123@gmail.com</td><td>8197762572</td><td>Jeniferdsouza123</td></tr><tr><th colspan="6">Exception</th></tr><tr><td colspan="6"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Ok&apos;)]&quot;}
-  (Session info: chrome=81.0.4044.138)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-CBDV09A&apos;, ip: &apos;192.168.0.114&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\avira\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54117}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1d0f42171ce16e1eb96e37ed0ac8393b
-*** Element info: {Using=xpath, value=//button[contains(text(),&apos;Ok&apos;)]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at iotConnect.Launch.OK(Launch.java:58)
-	at iotConnect.CreateAccountTest.AccountDetails(CreateAccountTest.java:35)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">iotConnect.AddDeviceTest#Add</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">iotConnect.AddRoomTest#Add</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Living Room</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">iotConnect.AddRoomTest#Add</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>BedRoom</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">iotConnect.CreateAccountTest#AccountDetails</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr><tr class="param stripe"><td>Maria.Dsouza</td><td>Maria@123</td><td>Maria@123</td><td>jjiyadsouza@yahoo.com</td><td>123456789</td><td>Mariasouza27</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">iotConnect.LoginAfterActivationTest#loginactivate</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">iotConnect.LoginTest#loginiot</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>Jenifer.Dsouza</td><td>Jenifer@1234</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">iotConnect.LoginTest#loginiot</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>Jenifer.Dsouza</td><td>Jenifer@123</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">iotConnect.RelayONorOFFTest#relaytest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">iotConnect.LoginTest#login</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>Jenifer.Dsouza</td><td>SmVuaUAxMjM0</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">iotConnect.LoginTest#login</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>Jenifer.Dsouza1</td><td>SmVuaUAxMjM0</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

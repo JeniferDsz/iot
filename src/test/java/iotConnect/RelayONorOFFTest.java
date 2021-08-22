@@ -9,30 +9,26 @@ import Resources.Base;
 
 public class RelayONorOFFTest extends Base {
 
-	@Test(groups = { "Smoke" }, priority = 9)
-	public void relaytest() throws IOException, InterruptedException {
+	@Test(priority=8,groups = { "Smoke" })
+	public void relayTurnOnOff() throws IOException, InterruptedException {
 		driver = initializedriver();
 		LoginAfterActivation la = new LoginAfterActivation(driver);
 		la.register().click();
-		la.enterusername().sendKeys("123");
-		la.enteruserpass().sendKeys("******");
+		LoginAfterActivationTest lt=new LoginAfterActivationTest();
+		lt.credentials();
 		la.submit().click();
 		la.alertsuccess().click();
 		Thread.sleep(2000);
 		la.alertaccept().click();
-		AddDevice a = new AddDevice(driver);
-		a.RoomName().click();
 		DeviceStatus ds = new DeviceStatus(driver);
+		ds.RoomName().click();
 		ds.deviceclick().click();
 		System.out.println("device status is:" + ds.devicestatus().getText());
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		Relay r = new Relay(driver);
-		Select relays = new Select(r.selecttest());
-		relays.selectByVisibleText("Relay 3");
-		Select status = new Select(r.onofftest());
-		status.selectByVisibleText("OFF");
-		;
-
+		r.toggleonoff();
+		Thread.sleep(2000);
+		driver.close();
 	}
 
 }

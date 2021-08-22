@@ -18,9 +18,10 @@ public class ForgotPassword {
 			this.driver=driver;
 		}
 		By userregister=By.xpath("//a[contains(text(),'Login \\ Register')]");
-		By forgotpass=By.xpath("//button[@class='btn btn-warning']");
+		By forgotpass=By.xpath("//button[contains(@onclick,'forgetUser')]");
 		By email=By.xpath("//input[@id='forget_email']");
 		By submit=By.xpath("//button[contains(text(), 'Ok')]");
+		By ok=By.xpath("//button[@class='ui-button ui-corner-all ui-widget']");
 		
 		public WebElement register() throws InterruptedException
 		{
@@ -46,4 +47,10 @@ public class ForgotPassword {
 			
 			return driver.findElement(submit);
 		}
+		public WebElement clickok() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			return driver.findElement(ok);
+		}
+		
 }

@@ -11,10 +11,15 @@ public class Minimise {
 	{
 		this.driver=driver;
 	}
-	By min=By.xpath("//button[@class='btn btn-default resize-btn pull-right']");
+	By minimize=By.cssSelector("button[onclick*='minimize']");
+	By room=By.xpath("//a[@id='room_305_btn']");
 	public WebElement minimizewindow()
 	{
-		return driver.findElement(min);
+		return driver.findElement(minimize);
+	}
+	public WebElement RoomName()
+	{
+		return driver.findElement(room);
 	}
 
 }

@@ -13,22 +13,17 @@ import Resources.Base;
 public class ForgotPasswordTest extends Base {
 
 	@Test(priority=4)
-	public void forgotpassword() throws IOException, InterruptedException
+	public void forgotPassword() throws IOException, InterruptedException
 	{
 		WebDriver driver=initializedriver();
 		ForgotPassword fp=new ForgotPassword(driver);
 		fp.register().click();
 		fp.forgotpassword().click();
-		fp.sendemail().sendKeys("jjendsouza@gmail.com");
+		fp.sendemail().sendKeys("jensgdigital@gmail.com");
 		Thread.sleep(2000);
 		fp.submitemail().click();
-	}
-	@AfterTest
-	public void closebrowser() throws InterruptedException
-	{
+		fp.clickok();
 		Thread.sleep(2000);
-		driver.close();
-		driver=null;
+		driver.quit();
 	}
-	
 }

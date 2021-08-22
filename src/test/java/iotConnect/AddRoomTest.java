@@ -2,6 +2,7 @@ package iotConnect;
 
 import java.io.IOException;
 
+import org.apache.commons.codec.binary.Base64;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.DataProvider;
@@ -11,15 +12,15 @@ import Resources.Base;
 
 public class AddRoomTest extends Base{
 
-	@Test(dataProvider="getData",groups={"Smoke"},priority=5)
-	public void Add(String Roomnames) throws IOException, InterruptedException
+	@Test(priority=5,dataProvider="getData",groups={"Smoke"})
+	public void addRoom(String Roomnames) throws IOException, InterruptedException
 	{
 		WebDriver driver=initializedriver();
 		AddRoom a=new AddRoom(driver);
 		LoginAfterActivation la=new LoginAfterActivation(driver);
 		la.register().click();
-		la.enterusername().sendKeys("Jenifer.Dsouza");
-		la.enteruserpass().sendKeys("Jenifer@123");
+		LoginAfterActivationTest lt=new LoginAfterActivationTest();
+		lt.credentials();
 		la.submit().click();
 		la.alertsuccess().click();
 		la.alertaccept().click();
@@ -29,20 +30,15 @@ public class AddRoomTest extends Base{
 		System.out.println(a.Alertext().getText());
 		a.AlertOk().click();
 		Thread.sleep(2000);
+		driver.quit();
 		}
 	@DataProvider
 	public Object[] getData()
 	{
 		String obj[][]=new String[2][1];
 		obj[0][0]="BedRoom";
-		obj[1][0]="Living Room";
+		obj[1][0]="DeleteRoom";
 		return obj;
 	}
-	@AfterTest
-	public void closebrowser() throws InterruptedException
-	{
-		Thread.sleep(2000);
-		driver.close();
-		driver=null;
-	}
+	
 }

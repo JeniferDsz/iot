@@ -1,6 +1,5 @@
-20:35:24.183 [main] ERROR Resources.Base - Wrong email or pssword entered
-20:35:42.230 [main] DEBUG Resources.Base - Started debugging
-20:35:42.230 [main] INFO  Resources.Base - driver is initialized
-20:35:58.167 [main] INFO  Resources.Base - Home page is loaded
-20:36:13.346 [main] INFO  Resources.Base - text is displayed
-20:36:13.469 [main] ERROR Resources.Base - Wrong email or pssword entered
+19:33:00.440 [TestNG-tests-1] INFO  Resources.Base - driver is initialized
+19:33:15.827 [TestNG-tests-1] INFO  Resources.Base - Home page is loaded
+19:33:22.671 [TestNG-tests-1] DEBUG Resources.Base - Started debugging
+19:33:22.672 [TestNG-tests-1] INFO  Resources.Base - driver is initialized
+19:33:39.848 [TestNG-tests-1] INFO  Resources.Base - Home page is loaded

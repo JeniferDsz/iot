@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="iotConnect.Listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Test(failed)">
     <groups>
       <run>
-        <include name="Smoke"/>
+        <include name="fail"/>
       </run>
     </groups>
     <classes>
-      <class name="iotConnect.CodeActivationTest">
+      <class name="iotConnect.DeleteRoomTest">
         <methods>
-          <include name="Entercode" invocation-numbers="0"/>
+          <include name="deleteRoom"/>
         </methods>
-      </class> <!-- iotConnect.CodeActivationTest -->
-      <class name="iotConnect.CreateAccountTest">
-        <methods>
-          <include name="AccountDetails" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- iotConnect.CreateAccountTest -->
+      </class> <!-- iotConnect.DeleteRoomTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
